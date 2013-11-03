@@ -4,7 +4,7 @@
             <meta charset="utf-8"></meta>
             <title>
 
-                Student
+                Student Entry
 
             </title>
             <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
@@ -16,64 +16,7 @@
 
             -->
             <link rel="stylesheet" href="css/bootstrap.css"></link>
-            <style type="text/css">
-
-
-
-                      /* Sticky footer styles
-                      -------------------------------------------------- */
-
-                      html,
-                      body {
-                        height: 100%;
-                        /* The html and body elements cannot have any padding or margin. */
-                      }
-
-                      /* Wrapper for page content to push down footer */
-                      #wrap {
-                        min-height: 100%;
-                        height: auto !important;
-                        height: 100%;
-                        /* Negative indent footer by it's height */
-                        margin: 0 auto -60px;
-                      }
-
-                      /* Set the fixed height of the footer here */
-                      #push,
-                      #footer {
-                        height: 60px;
-                      }
-                      #footer {
-                        background-color: #f5f5f5;
-                      }
-
-                      /* Lastly, apply responsive CSS fixes as necessary */
-                      @media (max-width: 767px) {
-                        #footer {
-                          margin-left: -20px;
-                          margin-right: -20px;
-                          padding-left: 20px;
-                          padding-right: 20px;
-                        }
-                      }
-
-
-
-                      /* Custom page CSS
-                      -------------------------------------------------- */
-                      /* Not required for template or sticky footer method. */
-
-                      .container {
-                        width: auto;
-                        max-width: 680px;
-                      }
-                      .container .credit {
-                        margin: 20px 0;
-                      }
-
-                    
-
-            </style>
+            <link rel="stylesheet" href="css/footer.css"></link>
             <link rel="stylesheet" href="css/bootstrap-responsive.css"></link>
             <!--
 
@@ -114,28 +57,51 @@
                     <div class="page-header">
                         <h1>
 
-                            Sticky footer
+                            Class Name
 
                         </h1>
                     </div>
-                    <p class="lead">
+			<form name="input" action="" method="post"> 
+			<p class="lead">
 
-                        Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS.
-
-                    </p>
-                    <p>
-
-                        Use 
-
-                        <a href="./sticky-footer-navbar.html">
-
-                            the sticky footer
-
-                        </a>
-
-                         with a fixed navbar if need be, too.
+                        Select your name from the list:
 
                     </p>
+
+			<p>
+				<select>
+					<option value="1">Alex Alexander</option>
+					<option value="2">Dave Davidson</option>
+					<option value="3">Jimmy John</option>
+					<option value="4">Ritchie Rich</option>
+					<option value="5">Sam Samuels</option>
+				</select>
+			</p>
+			
+			<p class="lead">
+
+                        Select the attributes that best describe you:
+
+                    </p>
+			
+			<p>
+
+			<input type="checkbox" name="attribute" value="webcode"> Web Programming<br>
+			<input type="checkbox" name="attribute" value="javacode"> Java/C/Python Programming<br>			
+			<input type="checkbox" name="attribute" value="present"> Presentation Skills<br>
+			<input type="checkbox" name="attribute" value="organization"> Organizational Skills<br>
+			<input type="checkbox" name="attribute" value="useless"> No Skills<br>
+
+			</p>
+			
+			<p class="lead">
+				
+				<input type="submit" value="Submit">
+
+			</p>
+
+			</form>
+                
                 </div>
                 <div id="push"></div>
             </div>
@@ -143,23 +109,7 @@
                 <div class="container">
                     <p class="muted credit">
 
-                        Example courtesy 
-
-                        <a href="http://martinbean.co.uk">
-
-                            Martin Bean
-
-                        </a>
-
-                         and 
-
-                        <a href="http://ryanfait.com/sticky-footer/">
-
-                            Ryan Fait
-
-                        </a>
-
-                        .
+                  Group Maker 2013. csc212-groupmaker@googlegroups.com
 
                     </p>
                 </div>
