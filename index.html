@@ -1,44 +1,153 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml"> 
- 
-  <head> 
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
-    <title>Group Maker</title> 
-  </head> 
- 
-  <body>
- 
-    <h1>Group Maker</h1>
-	<p>	
-		<img src="lolcats.jpg" alt="teamGroupMaker" width="600" height="480">
-		<img src="catsahn.jpg" alt="catsahn" width="480" height="480">
-	</p>
-	<p>
-		From left to right in image:
-		<ul>
-			<li>Mitchell Gordon</li>
-			<li>Sagi Sulimani</li>
-			<li>Denis Lubwa</li>
-			<li>Alex Feiszli</li>
-			<li>Ehsan Hoque (instructor)</li>
-			<li>Alex Scherzer</li>
-			<li>Luke Kortepeter</li>
-			<li>Justin Kieber-King (not pictured)</li>
-		</ul>
-	</p>
-	<h2>Project Info:</h2>
+    <!DOCTYPE html>
 
-	<p>
-		Project Mentor: Ryan Puffer
-	</p>
-
-	<p>
-		<a href="https://docs.google.com/document/d/1W8OKZuBIKdWoUFxaX9E2vpXvE4Vknb_Fgb9Uf3wdPe8/edit">Project Proposal</a>
-	</p>
+    <html lang="eng">
+      <head>
+        <meta charset="utf-8" />
+        <title>Group Maker</title>
+          <meta name="viewport" content="width=device-width initial-scale=1.0"/>
+          <!--bootstrap -->
+          <link rel="stylesheet" href="dist/css/bootstrap.min.css"/>
+          <link rel="stylesheet" href="dist/css/custom.css"/>
 
 
-  
-  </body>
+      </head>
 
-</html>
+      <body>
+      <div class="container">
+          <!-- row 1 for navigation -->
+          <div class="row">
+              <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+                  <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+                          <span class="sr-only">Toggle Navigation</span>
+                          <span class="glyphicon glyphicon-circle-arrow-down"></span>
+                          MENU
+                          
+                      </button>
+                  </div>
+                  <div class="collapse navbar-collapse" id="collapse">
+                      <ul class="nav navbar-nav">
+                          <li class="active"><a href="#">Home</a></li>
+                          <li class="dropdown"><a href="#" data-toggle="dropdown">About <span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="#">Random</a></li>
+                                  <li><a href="#">Testing</a></li>
+                                  <li><a href="#">Placeholder</a></li>
+                              </ul>
+                          </li>
+                          <li><a href="#">Contact</a></li>
+                      </ul>
+                  </div>
+              </nav>
+          </div> <!-- end of row 1 -->
+          <!-- row 2 jumbotron header -->
+          <div class="jumbotron">
+              <img src="lolcats.jpg" alt="" width="240" height="240" class="img-responsive pull-right img-rounded"/>
+              <h1>Group Maker</h1>
+              <p>Where we take the hustle and stress out of group making for school projects!
+                  Prepare to have your mind blown away!</p>
+
+          </div><!-- end of row 2 -->
+
+
+          <div class="row"> <!-- main article/aside row -->
+            <article class="col-lg-offset-1 col-sm-offset-1 col-lg-8 col-sm-7 col-lg-push-3 col-sm-push-4">
+                <h1>A lil' Background</h1>
+                <p>Forming groups for class projects can be a difficult, stressful process. Students often choose the convenience of working with their friends over efficiency. Conversely, students may not have friends to work with and struggle to find a group at all. As a result, groups can become unbalanced where skill sets are not evenly distributed. Furthermore, choosing groups in person is often a hectic process.
+                </p>
+                <p>Ideally, groups will be evenly distributed among skillsets that are required for the project. We think a website that quickly automates this process by allowing students to enter information about their background and skills, and then algorithmically create groups could solve this problem.
+                </p>
+                <p>Random group generators do already exist. However, our product differentiates itself by algorithmically pairing people to create optimal groups.</p>
+
+                <!-- nested row 3 -->
+                <div class="row">
+                    <div class="clearfix visible-xs"></div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h4> Meet Denis</h4>
+                                <p>Major: TEAM </p>
+                                    <p>Year: Graduate</p>
+                                    <p>Programming languages: HTML, CSS and JavaScript including its libraries and frameworks
+
+                                    </p>
+
+                                <p><a href="#" class="btn btn-info">Read more >></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h4>Meet Justin</h4>
+                                <p>Major: Computer Science
+                                    Year: Junior
+                                    Programming languages: Java, JavaScript, PHP, HTML, CSS, C, MYSQL
+                                </p>
+                                <p><a href="#" class="btn btn-info">Read more >></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix visible-xs"></div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h4>Meet Luke</h4>
+                                <p>Major: Computer Science
+                                    Year: Junior
+                                    Programming languages: Java, JavaScript, PHP, HTML, CSS </p>
+                                <p><a href="#" class="btn btn-info">Read more >></a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-xs-6">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h4> Meet Alex</h4>
+                                <p>Major: Financial Economics, Comp. Sci minor
+                                    Year: Senior
+                                    Programming languages (if any): Java, HTML, Python
+                                </p>
+                                <p><a href="#" class="btn btn-info">Read more >></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- end nested row 3 -->
+            </article>
+                <aside class="col-lg-3 col-sm-4 col-lg-pull-9 col-sm-pull-8">
+                    <h3>Meet the team (from left to right):</h3>
+                    <ul class="nav nav-pills nav-stacked">
+                        <li><a href="#"> Mitchell Gordon</a></li>
+                        <li><a href="#"> Sagi Sulimani</a></li>
+                        <li class="active"><a href="#"> Denis Lubwa</a></li>
+                        <li><a href="#"> Alex Feiszli</a></li>
+                        <li><a href="#"> Ehsan Hoque (instructor)</a></li>
+                        <li><a href="#"> Alex Scherzer </a></li>
+                        <li><a href="#"> Luke Kortepeter</a></li>
+                        <li><a href="#"> Justin Kieber-King (not pictured)</a></li>
+                    </ul>
+                </aside>
+
+          </div>
+            <footer class="row">
+                <h3>Miscellaneous:</h3>
+
+                <p>
+                    Project Mentor: Ryan Puffer
+                </p>
+
+                <p>
+                    <a href="https://docs.google.com/document/d/1W8OKZuBIKdWoUFxaX9E2vpXvE4Vknb_Fgb9Uf3wdPe8/edit">Project Proposal</a>
+                </p>
+
+            </footer>
+          </div>
+        <!-- javascript -->
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+        <script src="dist/js/bootstrap.min.js"></script>
+
+      </body>
+
+    </html>

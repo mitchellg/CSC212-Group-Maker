@@ -1,0 +1,40 @@
+body {
+    padding: 70px;
+
+}
+
+.pull-right.img-responsive{
+    margin: 0 0 1em 1em;
+
+}
+
+
+.navbar-inverse .navbar-toggle {
+
+    color: white;
+    font-weight: bold;
+    border-color: #ffffff;
+}
+
+.navbar-inverse .navbar-toggle:hover {
+    color: #333;
+    background-color: #ddd;
+
+}
+
+.navbar-inverse .navbar-toggle .glyphicon {
+    color: #ffffff;
+}
+
+.navbar-inverse .navbar-toggle .glyphicon:hover{
+    color: #333;
+}
+
+
+footer {
+    padding: 2em 0; /* first for topandbottom next for left and right*/
+    margin: 3em 0;
+    border-top: 1px solid #ddd;
+    color: #999;
+    text-align: center;
+}
