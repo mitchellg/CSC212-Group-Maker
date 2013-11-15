@@ -13,13 +13,17 @@ $( document ).ready(function() {
 	  		weightsArray[i] = $('#ID' + (i + 1) + '_weight').val();
 	  	}
 
+	  	var projectID;
+
 	  	$.ajax({
   	        url: "addProjectToDb.php",
   	        async: 'false',
   	        type: "POST",
   	        data: {studentNames: JSON.stringify(namesArray), attributes: JSON.stringify(attributesArray), weights: JSON.stringify(weightsArray), projectName: $('#projectName').val(), sizeGroups: $('#sizeGroups').val()},
-  	        success: function(){
-  	            alert("success");
+  	        success: function(d){
+  	            projectID = d;
+  	            alert(d);
+  	            document.location.href = 'authorResult.php?projectID=' + projectID;
   	        },
   	        error:function(){
   	            alert("failure");
@@ -27,6 +31,8 @@ $( document ).ready(function() {
 	  	});
 
 		event.preventDefault();
+
+		// document.location.href = 'authorResult.php?projectID=' + projectID;
 	});
     
 });

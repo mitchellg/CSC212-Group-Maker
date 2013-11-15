@@ -39,7 +39,7 @@ for($i = 0; $i < sizeof($studentNames); $i++){
 	}
 }
 
-$stmt = "CREATE TABLE `$projectID` (`id` INT(11) NOT NULL AUTO_INCREMENT,`attribute` VARCHAR(99) NOT NULL ,`weight` INT(11) NOT NULL ,`studentIndex` INT(11) NOT NULL ,`studentWeight` INT(11) NOT NULL ,PRIMARY KEY (`id`) )";
+$stmt = "CREATE TABLE `$projectID` (`id` INT(11) NOT NULL AUTO_INCREMENT,`attribute` VARCHAR(99) NOT NULL ,`weight` VARCHAR(99) NOT NULL ,`studentIndex` INT(11) NOT NULL ,`studentWeight` INT(11) NOT NULL ,PRIMARY KEY (`id`) )";
 $db->exec($stmt); //creates new table for project
 
 for($i = 0; $i < sizeof($attributes); $i++){
@@ -53,9 +53,6 @@ for($i = 0; $i < sizeof($attributes); $i++){
 	}
 }
 
-
-
-
-// header( 'Location: http://ec2-54-205-135-226.compute-1.amazonaws.com/index.php' ) ; //send user back to main page
+echo $projectID;
 
 ?>
