@@ -28,6 +28,34 @@ catch (PDOException $e) {
     echo $e->getMessage();
 }
 
+for($i = 0; $i < sizeof($studentNames); $i++){
+	$stmt = $db->prepare("INSERT INTO students(name, class, numAttributes) VALUES(:name, :class, :numAttributes)"); //prepare insert
+	$data = array(':name' => $studentNames[$i], ':class' => $projectID, ':numAttributes' => sizeof($attributes)); //array containing data
+	try {
+	    $stmt->execute($data);
+	}
+	catch (PDOException $e) {
+	    echo $e->getMessage();
+	}
+}
+
+$stmt = "CREATE TABLE `$projectID` (`id` INT(11) NOT NULL AUTO_INCREMENT,`attribute` VARCHAR(99) NOT NULL ,`weight` INT(11) NOT NULL ,`studentIndex` INT(11) NOT NULL ,`studentWeight` INT(11) NOT NULL ,PRIMARY KEY (`id`) )";
+$db->exec($stmt); //creates new table for project
+
+for($i = 0; $i < sizeof($attributes); $i++){
+	$stmt = $db->prepare("INSERT INTO $projectID(attribute, weight, studentIndex) VALUES(:attribute, :weight, :studentIndex)"); //prepare insert
+	$data = array(':attribute' => $attributes[$i], ':weight' => $weights[$i], ':studentIndex' => -1); //array containing data
+	try {
+	    $stmt->execute($data);
+	}
+	catch (PDOException $e) {
+	    echo $e->getMessage();
+	}
+}
+
+
+
+
 // header( 'Location: http://ec2-54-205-135-226.compute-1.amazonaws.com/index.php' ) ; //send user back to main page
 
 ?>
