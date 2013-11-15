@@ -59,7 +59,7 @@
       </div>
 
 
-      <form role="form">
+      <form id="authorForm" role="form">
         <div class="form-group">
           <label for="projectName">Project Name</label>
           <input type="text" class="form-control" id="projectName" placeholder="Enter project name">
@@ -106,7 +106,7 @@
         <button type="button" id="btnDel" name="btnDel" class="btn btn-danger" disabled="disabled">remove attribute above</button>
         </p>
         
-        </br><p><button type="submit" class="btn btn-default">Submit</button></p>
+        </br><p><button id="authorSubmit" type="submit" class="btn btn-default">Submit</button></p>
       </form>
 
     </div> <!-- /container -->
@@ -118,5 +118,6 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
     <script src="cloneForm/js/clone-form-td.js"></script>
+    <script src="authorSubmit.js"></script>
   </body>
 </html>
