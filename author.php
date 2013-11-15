@@ -42,7 +42,7 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li class="active"><a href="#about">Authoring Tool</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -56,7 +56,6 @@
       <div class="jumbotron">
         <h1>Instructor Authoring Tool</h1>
         <p>Fill out the form below to begin making groups for your class.</p>
-        <p>To see the difference between static and fixed top navbars, just scroll.</p>
       </div>
 
 
@@ -73,11 +72,11 @@
           <label for="studentNames">Student names</label>
           <textarea id="studentNames" class="form-control" rows="20" placeholder="Enter the names of the students, 1 name per line."></textarea>
         </div>
-        <div class="row">
+        <div id="entry1" class="clonedInput row">
           <div class="col-xs-3">
             <div class="form-group">
-              <label for="selectAttributes">Attribute</label>
-              <select id="selectAttributes" class="select_clone form-control">
+              <label for="ID1_attribute" class="attribute_label_clone">Attribute</label>
+              <select id="ID1_attribute" class="attribute_clone form-control">
                 <option>Web programming</option>
                 <option>Leadership</option>
                 <option>Design</option>
@@ -89,8 +88,8 @@
           </div>
           <div class="col-xs-2">
             <div class="form-group">
-              <label for="weight">Weight</label>
-              <select id="selectWeight" class="weight_clone form-control">
+              <label for="ID1_weight" class="weight_label_clone">Weight</label>
+              <select id="ID1_weight" class="weight_clone form-control">
                 <option>Highest</option>
                 <option>High</option>
                 <option>Medium</option>
@@ -102,7 +101,12 @@
           </div>
         </div>
         
-        <button type="submit" class="btn btn-default">Submit</button>
+        <p>
+        <button type="button" id="btnAdd" name="btnAdd" class="btn btn-info">add attribute</button>
+        <button type="button" id="btnDel" name="btnDel" class="btn btn-danger" disabled="disabled">remove attribute above</button>
+        </p>
+        
+        </br><p><button type="submit" class="btn btn-default">Submit</button></p>
       </form>
 
     </div> <!-- /container -->
@@ -112,7 +116,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="/dist/js/bootstrap.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
     <script src="cloneForm/js/clone-form-td.js"></script>
   </body>
 </html>

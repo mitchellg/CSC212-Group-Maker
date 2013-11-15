@@ -16,36 +16,15 @@ $(function () {
         To make more, you can copy the one for form elements and simply update the classes for its label and input.
         Keep in mind that the .val() method is what clears the element when it gets cloned. Radio and checkboxes need .val([]) instead of .val('').
     */
-        // H2 - section
-        newElem.find('.heading-reference').attr('id', 'ID' + newNum + '_reference').attr('name', 'ID' + newNum + '_reference').html('Entry #' + newNum);
 
         // Title - select
-        newElem.find('.label_ttl').attr('for', 'ID' + newNum + '_title');
-        newElem.find('.select_ttl').attr('id', 'ID' + newNum + '_title').attr('name', 'ID' + newNum + '_title').val('');
+        newElem.find('.attribute_label_clone').attr('for', 'ID' + newNum + '_attribute');
+        newElem.find('.attribute_clone').attr('id', 'ID' + newNum + '_attribute').attr('name', 'ID' + newNum + '_attribute').val('');
 
         // First name - text
-        newElem.find('.label_fn').attr('for', 'ID' + newNum + '_first_name');
-        newElem.find('.input_fn').attr('id', 'ID' + newNum + '_first_name').attr('name', 'ID' + newNum + '_first_name').val('');
+        newElem.find('.weight_label_clone').attr('for', 'ID' + newNum + '_weight');
+        newElem.find('.weight_clone').attr('id', 'ID' + newNum + '_weight').attr('name', 'ID' + newNum + '_weight').val('');
 
-        // Last name - text
-        newElem.find('.label_ln').attr('for', 'ID' + newNum + '_last_name');
-        newElem.find('.input_ln').attr('id', 'ID' + newNum + '_last_name').attr('name', 'ID' + newNum + '_last_name').val('');
-
-        // Color - checkbox
-        newElem.find('.label_checkboxitem').attr('for', 'ID' + newNum + '_checkboxitem');
-        newElem.find('.input_checkboxitem').attr('id', 'ID' + newNum + '_checkboxitem').attr('name', 'ID' + newNum + '_checkboxitem').val([]);
-
-        // Skate - radio
-        newElem.find('.label_radio').attr('for', 'ID' + newNum + '_radioitem');
-        newElem.find('.input_radio').attr('id', 'ID' + newNum + '_radioitem').attr('name', 'ID' + newNum + '_radioitem').val([]);
-
-        // Email - text
-        newElem.find('.label_email').attr('for', 'ID' + newNum + '_email_address');
-        newElem.find('.input_email').attr('id', 'ID' + newNum + '_email_address').attr('name', 'ID' + newNum + '_email_address').val('');
-
-        // Twitter handle (for Bootstrap demo) - append and text
-        newElem.find('.label_twt').attr('for', 'ID' + newNum + '_twitter_handle');
-        newElem.find('.input_twt').attr('id', 'ID' + newNum + '_twitter_handle').attr('name', 'ID' + newNum + '_twitter_handle').val('');
 
     // Insert the new element after the last "duplicatable" input field
         $('#entry' + num).after(newElem);
@@ -55,7 +34,7 @@ $(function () {
         $('#btnDel').attr('disabled', false);
 
     // Right now you can only add 4 sections, for a total of 5. Change '5' below to the max number of sections you want to allow.
-        if (newNum == 5)
+        if (newNum == 10)
         $('#btnAdd').attr('disabled', true).prop('value', "You've reached the limit"); // value here updates the text in the 'add' button when the limit is reached 
     });
 
