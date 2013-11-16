@@ -7,18 +7,19 @@
 
 	$classID = $_GET["projectID"];
 
-	$result = mysql_query("SELECT name 
+	$result = mysql_query("SELECT * 
 				FROM students 
 				WHERE class = '$classID';");
 
 	$i = 1;
+
 ?>
 
-	<select>
+	<select name="studentName">
 
 <?php
 	while($row = mysql_fetch_array($result)){
-	echo("<option value=" . "$i" . ">". $row['name'] . "</option>");
+	echo("<option value=" . $row['index'] . ">". $row['name'] . "</option>");
 	$i++;
 	}
 ?>

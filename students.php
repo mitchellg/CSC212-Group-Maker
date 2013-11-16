@@ -61,12 +61,19 @@
 
                         </h1>
                     </div>
-			<form name="input" action="" method="post"> 
+
+			<?php
+			$classID = $_GET["projectID"];
+			?>
+
+			<form name="input" action="studentSubmit.php"  method="post"> 
 			<p class="lead">
 
                         Select your name from the list:
 
                     </p>
+
+			<input type="hidden" name="projectID" value="<?php echo $classID ?>"<br>
 
 			<p>
 				<?php
