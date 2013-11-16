@@ -90,7 +90,7 @@
               <label for="ID1_weight" class="weight_label_clone">Importance</label>
               <select id="ID1_weight" class="weight_clone form-control">
                 <option value="10">High</option>
-                <option value="7">Medium</option>
+                <option value="7" selected="selected">Medium</option>
                 <option value="3">Low</option>
 
               </select>
