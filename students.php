@@ -61,7 +61,12 @@
 
                         </h1>
                     </div>
-			<form name="input" action="" method="post"> 
+
+			<?php
+			$classID = $_GET["projectID"];
+			?>
+
+			<form name="input" action="studentSubmit.php?projectID=<?php echo $classID ?>"  method="post"> 
 			<p class="lead">
 
                         Select your name from the list:
@@ -69,13 +74,9 @@
                     </p>
 
 			<p>
-				<select>
-					<option value="1">Alex Alexander</option>
-					<option value="2">Dave Davidson</option>
-					<option value="3">Jimmy John</option>
-					<option value="4">Ritchie Rich</option>
-					<option value="5">Sam Samuels</option>
-				</select>
+				<?php
+					include 'studentList.php';
+				?>			
 			</p>
 			
 			<p class="lead">
@@ -85,13 +86,9 @@
                     </p>
 			
 			<p>
-
-			<input type="checkbox" name="attribute" value="webcode"> Web Programming<br>
-			<input type="checkbox" name="attribute" value="javacode"> Java/C/Python Programming<br>			
-			<input type="checkbox" name="attribute" value="present"> Presentation Skills<br>
-			<input type="checkbox" name="attribute" value="organization"> Organizational Skills<br>
-			<input type="checkbox" name="attribute" value="useless"> No Skills<br>
-
+				<?php
+					include 'attributeList.php';
+				?>
 			</p>
 			
 			<p class="lead">
