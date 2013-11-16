@@ -88,13 +88,11 @@
           </div>
           <div class="col-xs-2">
             <div class="form-group">
-              <label for="ID1_weight" class="weight_label_clone">Weight</label>
+              <label for="ID1_weight" class="weight_label_clone">Importance</label>
               <select id="ID1_weight" class="weight_clone form-control">
-                <option>Highest</option>
-                <option>High</option>
-                <option>Medium</option>
-                <option>Low</option>
-                <option>Lowest</option>
+                <option value="3">Low</option>
+                <option value="7">Medium</option>
+                <option value="10">High</option>
 
               </select>
             </div>
