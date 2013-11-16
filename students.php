@@ -69,13 +69,9 @@
                     </p>
 
 			<p>
-				<select>
-					<option value="1">Alex Alexander</option>
-					<option value="2">Dave Davidson</option>
-					<option value="3">Jimmy John</option>
-					<option value="4">Ritchie Rich</option>
-					<option value="5">Sam Samuels</option>
-				</select>
+				<?php
+				include 'studentList.php';
+				?>			
 			</p>
 			
 			<p class="lead">
