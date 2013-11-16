@@ -70,7 +70,7 @@
 
 			<p>
 				<?php
-				include 'studentList.php';
+					include 'studentList.php';
 				?>			
 			</p>
 			
@@ -81,13 +81,9 @@
                     </p>
 			
 			<p>
-
-			<input type="checkbox" name="attribute" value="webcode"> Web Programming<br>
-			<input type="checkbox" name="attribute" value="javacode"> Java/C/Python Programming<br>			
-			<input type="checkbox" name="attribute" value="present"> Presentation Skills<br>
-			<input type="checkbox" name="attribute" value="organization"> Organizational Skills<br>
-			<input type="checkbox" name="attribute" value="useless"> No Skills<br>
-
+				<?php
+					include 'attributeList.php';
+				?>
 			</p>
 			
 			<p class="lead">
