@@ -28,7 +28,36 @@
   </head>
 
   <body>
+	<?php
+		$db = new PDO('mysql:host=localhost;dbname=group_maker', 'root', 'password',array(PDO::ATTR_EMULATE_PREPARES => false, 
+                                   PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)); //From: http://wiki.hashphp.org/PDO_Tutorial_for_MySQL_Developers 
+        	 $classID = $_GET["projectID"];
+		try{
+		$stmt = $db->query("SELECT className,sizeGroups 
+					from classes 
+					WHERE classId='$classID'");
+		$name = $stmt->fetch(PDO::FETCH_ASSOC);
+		$className = $name["className"];
+		$groupSize = $name["sizeGroups"];
+		 } catch(PDOException $ex){
+			echo "error occured in query ";
+		 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	?>
     <!-- Fixed navbar -->
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -51,63 +80,19 @@
     </div>
 
     <div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h1><?php echo $className ?></h1>
+		</div>
+	 <?php for($i = 0; $i <= $groupSize; $i++){ ?>
+                <div class="row">
+                        <div class="col-md-12">
+                                <?php echo $i ?>
+                        </div>
+                </div>
+        <?php } ?>
 
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>Instructor Authoring Tool</h1>
-        <p>Fill out the form below to begin making groups for your class.</p>
-      </div>
-
-
-      <form id="authorForm" role="form">
-        <div class="form-group">
-          <label for="projectName">Project Name</label>
-          <input type="text" class="form-control" id="projectName" placeholder="Enter project name">
-        </div>
-        <div class="form-group">
-          <label for="sizeGroups">Size of groups</label>
-          <input type="text" class="form-control" id="sizeGroups" placeholder="Enter the size of groups">
-        </div>
-        <div class="form-group">
-          <label for="studentNames">Student names</label>
-          <textarea id="studentNames" class="form-control" rows="20" placeholder="Enter the names of the students, 1 name per line."></textarea>
-        </div>
-        <div id="entry1" class="clonedInput row">
-          <div class="col-xs-3">
-            <div class="form-group">
-              <label for="ID1_attribute" class="attribute_label_clone">Attribute</label>
-              <select id="ID1_attribute" class="attribute_clone form-control">
-                <option>Web programming</option>
-                <option>Leadership</option>
-                <option>Design</option>
-                <option>Writing</option>
-                <option>Acting</option>
-
-              </select>
-            </div>
-          </div>
-          <div class="col-xs-2">
-            <div class="form-group">
-              <label for="ID1_weight" class="weight_label_clone">Weight</label>
-              <select id="ID1_weight" class="weight_clone form-control">
-                <option value="1">Neutral</option>
-                <option value="3">Important</option>
-                <option value="7">Very Important</option>
-                <option value="10">Most important</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-        
-        <p>
-        <button type="button" id="btnAdd" name="btnAdd" class="btn btn-info">add attribute</button>
-        <button type="button" id="btnDel" name="btnDel" class="btn btn-danger" disabled="disabled">remove attribute above</button>
-        </p>
-        
-        </br><p><button id="authorSubmit" type="submit" class="btn btn-default">Submit</button></p>
-      </form>
-
+	</div>
     </div> <!-- /container -->
 
 

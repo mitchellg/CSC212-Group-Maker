@@ -19,8 +19,8 @@ $projectID = generateRandomString();
 $db = new PDO('mysql:host=localhost;dbname=group_maker', 'root', 'password'); //get db connection
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-$stmt = $db->prepare("INSERT INTO classes(classID, className) VALUES(:classID, :className)"); //prepare insert
-$data = array(':className' => $projectName, ':classID' => $projectID); //array containing data
+$stmt = $db->prepare("INSERT INTO classes(classID, className,sizeGroups) VALUES(:classID, :className, :sizeGroups)"); //prepare insert
+$data = array(':className' => $projectName, ':classID' => $projectID, ':sizeGroups' => $sizeGroups); //array containing data
 try {
     $stmt->execute($data);
 }

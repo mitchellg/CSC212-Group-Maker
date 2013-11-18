@@ -57,7 +57,7 @@
                     <div class="page-header">
                         <h1>
 
-                            Class Name
+                            Student Entry
 
                         </h1>
                     </div>
@@ -66,12 +66,14 @@
 			$classID = $_GET["projectID"];
 			?>
 
-			<form name="input" action="studentSubmit.php?projectID=<?php echo $classID ?>"  method="post"> 
+			<form name="input" action="studentSubmit.php"  method="post"> 
 			<p class="lead">
 
                         Select your name from the list:
 
                     </p>
+
+			<input type="hidden" name="projectID" value="<?php echo $classID ?>"<br>
 
 			<p>
 				<?php

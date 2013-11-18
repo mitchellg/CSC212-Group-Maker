@@ -12,14 +12,14 @@ $( document ).ready(function() {
 	  		attributesArray[i] = $('#ID' + (i + 1) + '_attribute').val();
 	  		weightsArray[i] = $('#ID' + (i + 1) + '_weight').val();
 	  	}
-
+	 
 	  	var projectID;
 
 	  	$.ajax({
   	        url: "addProjectToDb.php",
   	        async: 'false',
   	        type: "POST",
-  	        data: {studentNames: JSON.stringify(namesArray), attributes: JSON.stringify(attributesArray), weights: JSON.stringify(weightsArray), projectName: $('#projectName').val(), sizeGroups: $('#sizeGroups').val()},
+  	        data: {studentNames: JSON.stringify(namesArray), attributes: JSON.stringify(attributesArray), weights: JSON.stringify(weightsArray), projectName: $('#projectName').val(), sizeGroups: parseInt($('#sizeGroups').val())},
   	        success: function(d){
   	            projectID = d;
   	            alert(d);

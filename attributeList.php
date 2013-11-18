@@ -7,14 +7,14 @@
 
 	$classID = $_GET["projectID"];
 
-	$result = mysql_query("SELECT attribute 
+	$result = mysql_query("SELECT * 
 				FROM $classID;");
 	
 	$i = 1;
 
 	while($row = mysql_fetch_array($result)){
 ?>
-	<input type='checkbox' name='attribute' value='<?php $row['weight'] ?>'><?php echo $row['attribute'] ?><br>
+	<input type='checkbox' name='attribute[]' value='<?php echo $row['weight'] ?>'><?php echo $row['attribute'] ?><br>
 
 <?php
 	$i++;
