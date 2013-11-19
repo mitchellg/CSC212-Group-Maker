@@ -42,11 +42,28 @@
 		 } catch(PDOException $ex){
 			echo "error occured in query ";
 		 }
+		
+		
+			$groupFetch = $db ->prepare("SELECT name, totalWeight from students 
+					WHERE class='$classID' 
+					ORDER BY totalWeight DESC");
+			$groupFetch -> execute();
+			$students= $groupFetch->fetchAll();
 
-
-
-
-
+			$i =1;
+			foreach( $students as $student){
+					$stmt = $db->prepare("UPDATE students
+					      		      SET groupNumber=?
+					      		      WHERE class=? AND name=?" ); //prepare insert
+				$stmt->execute(array($i,$classID,$student['name'])); //array containing data
+				$i++;
+				if($i == $groupSize+1){
+                                          $i = 1;   
+						
+					
+                                        }
+					
+			}
 
 
 
@@ -82,12 +99,12 @@
     <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<h1><?php echo $className ?></h1>
+			<h1><?php //echo $className; ?></h1>
 		</div>
 	 <?php for($i = 0; $i <= $groupSize; $i++){ ?>
                 <div class="row">
                         <div class="col-md-12">
-                                <?php echo $i ?>
+                                <?php //echo //$i ?>
                         </div>
                 </div>
         <?php } ?>

@@ -15,12 +15,13 @@ function generateRandomString($length = 20) {
 }
 
 $projectID = generateRandomString();
+$authorID = generateRandomString();
 
 $db = new PDO('mysql:host=localhost;dbname=group_maker', 'root', 'password'); //get db connection
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-$stmt = $db->prepare("INSERT INTO classes(classID, className,sizeGroups) VALUES(:classID, :className, :sizeGroups)"); //prepare insert
-$data = array(':className' => $projectName, ':classID' => $projectID, ':sizeGroups' => $sizeGroups); //array containing data
+$stmt = $db->prepare("INSERT INTO classes(classID, className, sizeGroups, authorID) VALUES(:classID, :className, :sizeGroups, :authorID)"); //prepare insert
+$data = array(':className' => $projectName, ':classID' => $projectID, ':sizeGroups' => $sizeGroups, ':authorID' => $authorID); //array containing data
 try {
     $stmt->execute($data);
 }
