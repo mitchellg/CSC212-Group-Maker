@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-    <title>Author Page</title>
+    <title>Group List Page</title>
 
     <!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.css" rel="stylesheet">
@@ -34,11 +34,18 @@
         	 $classID = $_GET["projectID"];
 		try{
 		$stmt = $db->query("SELECT className,sizeGroups 
-					from classes 
+					FROM classes 
 					WHERE classId='$classID'");
 		$name = $stmt->fetch(PDO::FETCH_ASSOC);
+		$studentsQuery = $db->prepare("SELECT name,groupNumber
+						FROM students 
+						WHERE class='$classID' 
+						ORDER BY groupNumber ASC");
+		$studentsQuery->execute();
+		$studentsByGroup = $studentsQuery->fetchAll();
 		$className = $name["className"];
-		$groupSize = $name["sizeGroups"];
+		$currentGroup = 1; //For loop that puts students into panels		
+		$currentStudent = 0;
 		 } catch(PDOException $ex){
 			echo "error occured in query ";
 		 }
@@ -51,37 +58,50 @@
 
 
 	?>
-    <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Group Maker</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="index.html">Home</a></li>
-            <li class="active"><a href="#about">Authoring Tool</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
-
-    <div class="container">
-	<div class="row">
-		<div class="page-header" style="text-align:center;">
-			<h1><?php echo strtoupper($className); ?></h1>
+	    <!-- Fixed navbar -->
+	    <div class="navbar navbar-default navbar-fixed-top">
+	      <div class="container">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="#">Group Maker</a>
 		</div>
-	 <?php for($i = 0; $i <= $groupSize; $i++){ ?>
-        	<div class="panel panel-primary">
-  			<div class="panel-heading"><?php echo "Group: ".$i ?></div>
-  			<div class="panel-body">
-    				Panel content
+		<div class="navbar-collapse collapse">
+		  <ul class="nav navbar-nav">
+		    <li><a href="index.html">Home</a></li>
+		    <li class="active"><a href="#about">Authoring Tool</a></li>
+		    <li><a href="#contact">Contact</a></li>
+		  </ul>
+		</div><!--/.nav-collapse -->
+	      </div>
+	    </div>
+
+	    <div class="container">
+		<div class="row">
+			<div class="page-header" style="text-align:center;">
+				<h1><?php echo strtoupper($className); ?></h1>
+			</div>
+		 <?php  while($currentStudent <= count($studentsByGroup)) { ?>
+			<div class="panel panel-primary">
+				<div class="panel-heading"><?php echo "Group: ".$studentsByGroup[$currentStudent]['groupNumber'] ?></div>
+						<table class="table">
+							<tr>
+								<th>#</th>
+								<th>name</th>
+								<th>other possible info</th>
+							</tr>
+						       	<?php $j=1; while($currentGroup == $studentsByGroup[$currentStudent]['groupNumber']){ ?>
+							<tr>
+								<td><?php echo $j++ ?></td>
+								<td><?php echo $studentsByGroup[$currentStudent++]['name'] ?></td>
+								<td>Info Here</td>
+							</tr>
+							<?php } $currentStudent++; $currentGroup++;?>
+						</table>
+				  
   			</div>
 		</div>        
         <?php } ?>
@@ -96,6 +116,5 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
     <script src="cloneForm/js/clone-form-td.js"></script>
-    <script src="authorSubmit.js"></script>
   </body>
 </html>
