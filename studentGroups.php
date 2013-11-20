@@ -44,30 +44,6 @@
 		 }
 		
 		
-			$groupFetch = $db ->prepare("SELECT name, totalWeight from students 
-					WHERE class='$classID' 
-					ORDER BY totalWeight DESC");
-			$groupFetch -> execute();
-			$students= $groupFetch->fetchAll();
-
-			$i =1;
-			foreach( $students as $student){
-					$stmt = $db->prepare("UPDATE students
-					      		      SET groupNumber=?
-					      		      WHERE class=? AND name=?" ); //prepare insert
-				$stmt->execute(array($i,$classID,$student['name'])); //array containing data
-				$i++;
-				if($i == $groupSize+1){
-                                          $i = 1;   
-						
-					
-                                        }
-					
-			}
-
-
-
-
 
 
 
@@ -98,15 +74,16 @@
 
     <div class="container">
 	<div class="row">
-		<div class="col-md-12">
-			<h1><?php //echo $className; ?></h1>
+		<div class="page-header" style="text-align:center;">
+			<h1><?php echo strtoupper($className); ?></h1>
 		</div>
 	 <?php for($i = 0; $i <= $groupSize; $i++){ ?>
-                <div class="row">
-                        <div class="col-md-12">
-                                <?php //echo //$i ?>
-                        </div>
-                </div>
+        	<div class="panel panel-primary">
+  			<div class="panel-heading"><?php echo "Group: ".$i ?></div>
+  			<div class="panel-body">
+    				Panel content
+  			</div>
+		</div>        
         <?php } ?>
 
 	</div>

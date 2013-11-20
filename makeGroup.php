@@ -1,5 +1,7 @@
 <?php
 
+    makeGroups($_REQUEST['authorID']);
+
 	function makeGroups( $classID){
 
 		 $db = new PDO('mysql:host=localhost;dbname=group_maker', 'root', 'password',array(PDO::ATTR_EMULATE_PREPARES => false,
