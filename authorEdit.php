@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-    <title>Author Page</title>
+    <title>Author Edit</title>
 
     <!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.css" rel="stylesheet">
@@ -57,7 +57,6 @@
         <!-- <p>Send this to your students: <a href="http://ec2-54-205-135-226.compute-1.amazonaws.com/GroupMaker/students.php?projectID=<?php echo $_REQUEST['projectID'];?>">http://ec2-54-205-135-226.compute-1.amazonaws.com/GroupMaker/students.php?projectID=<?php echo $_REQUEST['projectID'];?> -->
 
         <p><button type="button" id="makeGroupsButton" class="btn btn-lg btn-danger">Make Groups</button></p>
-        </p>
       </div>
 
 

@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-    <title>Author Page</title>
+    <title>Author</title>
 
     <!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.css" rel="stylesheet">
@@ -44,7 +44,8 @@
             <li><a href="index.html">Home</a></li>
             <li class="active"><a href="#about">Authoring Tool</a></li>
             <li><a href="#contact">Contact</a></li>
-          </ul>
+            <li><a href="#group">Group List</a></li>
+	  </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>

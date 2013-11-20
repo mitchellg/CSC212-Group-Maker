@@ -72,8 +72,9 @@
 		<div class="navbar-collapse collapse">
 		  <ul class="nav navbar-nav">
 		    <li><a href="index.html">Home</a></li>
-		    <li class="active"><a href="#about">Authoring Tool</a></li>
+		    <li><a href="#about">Authoring Tool</a></li>
 		    <li><a href="#contact">Contact</a></li>
+		    <li class="active"><a href="#group">Group List</a></li>
 		  </ul>
 		</div><!--/.nav-collapse -->
 	      </div>
@@ -84,7 +85,9 @@
 			<div class="page-header" style="text-align:center;">
 				<h1><?php echo strtoupper($className); ?></h1>
 			</div>
+		<div class="row">
 		 <?php  while($currentStudent <= count($studentsByGroup)) { ?>
+			<div class="row">
 			<div class="panel panel-primary">
 				<div class="panel-heading"><?php echo "Group: ".$studentsByGroup[$currentStudent]['groupNumber'] ?></div>
 						<table class="table">
@@ -99,15 +102,14 @@
 								<td><?php echo $studentsByGroup[$currentStudent++]['name'] ?></td>
 								<td>Info Here</td>
 							</tr>
-							<?php } $currentStudent++; $currentGroup++;?>
+							<?php } $currentStudent++;  $currentGroup++;?>
 						</table>
 				  
   			</div>
-		</div>        
-        <?php } ?>
+			</div>       
+        	<?php } ?>
 
-	</div>
-    </div> <!-- /container -->
+	      </div>  <!-- /container -->
 
 
     <!-- Bootstrap core JavaScript

@@ -21,9 +21,8 @@ $( document ).ready(function() {
   	        type: "POST",
   	        data: {studentNames: JSON.stringify(namesArray), attributes: JSON.stringify(attributesArray), weights: JSON.stringify(weightsArray), projectName: $('#projectName').val(), sizeGroups: parseInt($('#sizeGroups').val())},
   	        success: function(d){
-  	            projectID = d;
-  	            alert(d);
-  	            document.location.href = 'authorResult.php?projectID=' + projectID;
+  	            vals = d.split(";");
+  	            document.location.href = 'authorResult.php?projectID=' + vals[0] + "&authorID=" + vals[1];
   	        },
   	        error:function(){
   	            alert("failure");

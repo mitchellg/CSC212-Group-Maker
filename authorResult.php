@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-    <title>Author Page</title>
+    <title>Results</title>
 
     <!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.css" rel="stylesheet">
@@ -55,8 +55,8 @@
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
         <h1 style="color:red;">Hold the phone!</h1></br>
-        <p>Send this to your students: <a href="http://ec2-54-205-135-226.compute-1.amazonaws.com/GroupMaker/students.php?projectID=<?php echo $_REQUEST['projectID'];?>">http://ec2-54-205-135-226.compute-1.amazonaws.com/GroupMaker/students.php?projectID=<?php echo $_REQUEST['projectID'];?>
-        </p>
+        <p>Send this to your students:</br> <a href="http://ec2-54-205-135-226.compute-1.amazonaws.com/GroupMaker/students.php?projectID=<?php echo $_REQUEST['projectID'];?>">http://ec2-54-205-135-226.compute-1.amazonaws.com/GroupMaker/students.php?projectID=<?php echo $_REQUEST['projectID'];?></a></p>
+        <p>Use this page to create and edit groups. It's just for you; don't share it with your students!</br> <a href="http://ec2-54-205-135-226.compute-1.amazonaws.com/GroupMaker/authorEdit.php?authorID=<?php echo $_REQUEST['authorID'];?>">http://ec2-54-205-135-226.compute-1.amazonaws.com/GroupMaker/authorEdit.php?authorID=<?php echo $_REQUEST['authorID'];?></a></p>
       </div>
 
 

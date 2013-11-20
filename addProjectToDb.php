@@ -54,6 +54,6 @@ for($i = 0; $i < sizeof($attributes); $i++){
 	}
 }
 
-echo $projectID;
+echo "$projectID;$authorID";
 
 ?>

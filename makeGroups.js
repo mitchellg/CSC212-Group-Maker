@@ -7,7 +7,7 @@ $( document ).ready(function() {
   	        url: "makeGroup.php",
   	        async: 'false',
   	        type: "POST",
-  	        data: {gup("authorID")},
+  	        data: {authorID: gup("authorID")},
   	        success: function(d){
   	            alert("Groups made!")
   	        },
