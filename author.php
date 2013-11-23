@@ -66,7 +66,29 @@
         </div>
         <div class="form-group">
           <label for="sizeGroups">Size of groups</label>
-          <input type="text" class="form-control" id="sizeGroups" placeholder="Enter the size of groups">
+          <!--<input type="text" class="form-control" id="sizeGroups" placeholder="Enter the size of groups">-->
+	   <select id="sizeGroups" class="form-control">
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+		<option>6</option>
+		<option>7</option>
+		<option>8</option>
+		<option>9</option>
+		<option>10</option>
+		<option>11</option>
+		<option>12</option>
+		<option>13</option>
+		<option>14</option>
+		<option>15</option>
+		<option>16</option>
+		<option>17</option>
+		<option>18</option>
+		<option>19</option>
+		<option>20</option>
+          </select>
         </div>
         <div class="form-group">
           <label for="studentNames">Student names</label>
@@ -77,11 +99,43 @@
             <div class="form-group">
               <label for="ID1_attribute" class="attribute_label_clone">Attribute</label>
               <select id="ID1_attribute" class="attribute_clone form-control">
-                <option>Web programming</option>
-                <option>Leadership</option>
-                <option>Design</option>
-                <option>Writing</option>
+                <option>3D Modeling</option>
+                <option>3D Printing</option>
                 <option>Acting</option>
+                <option>Adobe Suite</option>
+                <option>Artistic Skills</option>
+                <option>Audio Mixing</option>
+                <option>C</option>
+                <option>C#</option>
+                <option>C++</option>
+                <option>Circuits</option>
+                <option>Databases</option>
+                <option>Design</option>
+                <option>Drawing</option>
+                <option>Excel</option>
+                <option>HTML</option>
+                <option>Java</option>
+                <option>JavaScript</option>
+                <option>Leadership</option>
+                <option>Martial Arts</option>
+                <option>Microsoft Access</option>
+                <option>Microsoft Office</option>
+                <option>MySQL</option>
+                <option>Organization</option>
+                <option>Parallel Programming</option>
+                <option>Photoshop</option>
+                <option>PHP</option>
+                <option>PowerPoint</option>
+                <option>Presentation Skills</option>
+                <option>Prolog</option>
+                <option>Python</option>
+                <option>Ruby</option>
+                <option>Scheme</option>
+                <option>Video Editing</option>
+                <option>Web Programming</option>
+                <option>Word</option>
+                <option>Writing</option>
+                <option>XML</option>
 
               </select>
             </div>

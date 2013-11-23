@@ -80,7 +80,13 @@
 					include 'studentList.php';
 				?>			
 			</p>
-			
+
+			<p class="lead">
+
+			   Enter the email you would like to use for this project:			
+			<p><input type="text" name="studentEmail" placeholder="StudentEmail@groupmaker.com"></p>
+			</p>
+
 			<p class="lead">
 
                         Select the attributes that best describe you:
@@ -95,7 +101,7 @@
 			
 			<p class="lead">
 				
-				<input type="submit" value="Submit">
+				<input id="submit" type="submit" value="Submit">
 
 			</p>
 
