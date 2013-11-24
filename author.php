@@ -116,7 +116,10 @@
                 <option>HTML</option>
                 <option>Java</option>
                 <option>JavaScript</option>
+<<<<<<< HEAD
 		  <option>Lambda Calculus</option>
+=======
+>>>>>>> 7df8c206c51659956ea6ca05c71f56e2c003c0ef
                 <option>Leadership</option>
                 <option>Martial Arts</option>
                 <option>Microsoft Access</option>
