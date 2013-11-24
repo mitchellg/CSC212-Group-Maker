@@ -18,7 +18,8 @@
             <link rel="stylesheet" href="css/bootstrap.css"></link>
             <link rel="stylesheet" href="css/footer.css"></link>
             <link rel="stylesheet" href="css/bootstrap-responsive.css"></link>
-            <!--
+            <link rel="stylesheet" href="css/loading-image.css"</link>
+	     <!--
 
              HTML5 shim, for IE6-8 support of HTML5 elements 
 
@@ -70,15 +71,19 @@
 	$classID = $_POST["projectID"];
 	$sID = $_POST["studentName"];
 	$aArray = $_POST['attribute'];
+	$sEmail = $_POST['studentEmail'];
 	
 	$aWeight = array_sum($aArray);
 	
-	$data = "UPDATE students SET totalWeight=$aWeight WHERE class='$classID' AND students.index='$sID';";
+	$data = "UPDATE students SET totalWeight='$aWeight', email='$sEmail' WHERE class='$classID' AND students.index='$sID';";
 
 	$result = mysql_query($data, $con);
 
 ?>
-	<p class="lead">Your information has been recorded!</p>
+	<p class="lead">Your information has been recorded! Please wait while others are entering their information </p>
+	<div class="loader">
+  <p id="load"></p>
+</div>
 
 </div>
  <div id="push"></div>
@@ -116,6 +121,28 @@
             <script src="../assets/js/bootstrap-collapse.js"></script>
             <script src="../assets/js/bootstrap-carousel.js"></script>
             <script src="../assets/js/bootstrap-typeahead.js"></script>
-        </body>
-    </html>
-	
+            <script src="spinner.js"></script>
+	</body
+
+<script>
+var opts = {
+  lines: 13, // The number of lines to draw
+  length: 20, // The length of each line
+  width: 10, // The line thickness
+  radius: 30, // The radius of the inner circle
+  corners: 1, // Corner roundness (0..1)
+  rotate: 0, // The rotation offset
+  direction: 1, // 1: clockwise, -1: counterclockwise
+  color: '#000', // #rgb or #rrggbb or array of colors
+  speed: 1, // Rounds per second
+  trail: 60, // Afterglow percentage
+  shadow: false, // Whether to render a shadow
+  hwaccel: false, // Whether to use hardware acceleration
+  className: 'spinner', // The CSS class to assign to the spinner
+  zIndex: 2e9, // The z-index (defaults to 2000000000)
+  top: 'auto', // Top position relative to parent in px
+  left: 'auto' // Left position relative to parent in px
+};
+var target = document.getElementById('lead`');
+var spinner = new Spinner(opts).spin(target);
+</script>

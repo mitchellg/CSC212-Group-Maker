@@ -8,6 +8,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src='jquery-sortable.js'></script>
+    <script src="gup.js"></script>
+    <script src="makeGroups.js"></script>
+    <link href="authorListStyle.css" rel="stylesheet">
 
     <title>Author Edit</title>
 
@@ -54,10 +59,11 @@
 
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-        <!-- <p>Send this to your students: <a href="http://ec2-54-205-135-226.compute-1.amazonaws.com/GroupMaker/students.php?projectID=<?php echo $_REQUEST['projectID'];?>">http://ec2-54-205-135-226.compute-1.amazonaws.com/GroupMaker/students.php?projectID=<?php echo $_REQUEST['projectID'];?> -->
 
         <p><button type="button" id="makeGroupsButton" class="btn btn-lg btn-danger">Make Groups</button></p>
       </div>
+
+    <p><?php include 'authorPrintGroups.php'; ?></p>
 
 
     </div> <!-- /container -->
@@ -66,9 +72,6 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
-    <script src="gup.js"></script>
-    <script src="makeGroups.js"></script>
   </body>
 </html>

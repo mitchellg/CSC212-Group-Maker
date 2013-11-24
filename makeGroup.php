@@ -33,5 +33,9 @@
 
                  }
 
+        $stmt = $db->prepare("UPDATE classes SET groupsMade = 1 where authorId=?"); //prepare insert
+        $stmt->execute(array($authorID));
+
+
 	}
 ?>
