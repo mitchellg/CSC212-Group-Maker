@@ -13,7 +13,7 @@
 
     if($areGroupsMade == 1){
 
-    	echo "<h3>Edit groups:</h3>";
+    	echo "<h3>Edit groups (drag and drop):</h3>";
 
     	$stmt1 = $db->prepare("SELECT * FROM students where class=? ORDER BY groupNumber ASC"); //prepare insert
     	$stmt1->execute(array($classID));
@@ -37,12 +37,15 @@
 
     	for($i = 0; $i < sizeOf($groups); $i++){
     		echo "<div class='panel panel-default'>";
-    		echo "<ol class='example'>";
+    		echo "<div class='panel-heading'>Group " . ($i + 1) . "</div>";
+    		echo "<ol id='group" . $i . "' class='group'>";
     		for($j = 0; $j < sizeOf($groups[$i]); $j++){
     			echo "<li>" . $groups[$i][$j] . "</li>";
     		}
     		echo "</ol>";
     		echo "</div>";
     	}
+
+    	echo "<button id='saveAuthorChanges' type='button' class='btn btn-primary'>Save changes</button>";
     }
 ?>

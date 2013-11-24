@@ -24,7 +24,7 @@ $( document ).ready(function() {
 
 		var adjustment
 
-		$("ol.example").sortable({
+		$("ol.group").sortable({
 		  group: 'simple_with_animation',
 		  pullPlaceholder: false,
 		  // animation on drop
@@ -79,8 +79,60 @@ $( document ).ready(function() {
 	  	});
 
 		event.preventDefault();
+		location.reload();
 
 		// document.location.href = 'authorResult.php?projectID=' + projectID;
 	});
+
+
+    $( "#saveAuthorChanges" ).click(function( event ) {	  	
+
+  	  	var numGroups;
+  	  	$.ajax({
+	        url: "getNumGroups.php",
+	        async: false,
+	        type: "POST",
+	        data: {authorID: gup("authorID")},
+	        success: function(d){
+	            numGroups = d;
+	        },
+	        error:function(){
+	            alert("failure");
+	        }
+  	  	});
+
+  	  	// alert(numGroups);
+
+
+  	  	var students = new Array(numGroups);
+  		for(var i = 0; i < numGroups; i++){
+  			students[i] = new Array();
+  			$('#group' + i + ' li').each(function(j, elem) {
+  			    students[i].push($(elem).text());
+  			});
+  		}
+
+  		// alert(students[0]);
+
+
+  	  	$.ajax({
+	        url: "updateGroups.php",
+	        async: false,
+	        type: "POST",
+	        data: {authorID: gup("authorID"), students: JSON.stringify(students)},
+	        success: function(d){
+	            alert("Groups updated!")
+	            // alert(d);
+	        },
+	        error:function(){
+	            alert("failure");
+	        }
+  	  	});
+
+  		// event.preventDefault();
+  		// location.reload();
+
+  		// document.location.href = 'authorResult.php?projectID=' + projectID;
+  	});
     
 });

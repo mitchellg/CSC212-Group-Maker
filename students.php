@@ -89,7 +89,7 @@
 
 			<p class="lead">
 
-                        Select the attributes that best describe you:
+                        Select skills that you are proficient in:
 
                     </p>
 			

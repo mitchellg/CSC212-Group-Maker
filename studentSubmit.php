@@ -122,7 +122,7 @@
             <script src="../assets/js/bootstrap-carousel.js"></script>
             <script src="../assets/js/bootstrap-typeahead.js"></script>
             <script src="spinner.js"></script>
-	</body
+	</body>
 
 <script>
 var opts = {
