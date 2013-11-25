@@ -40,6 +40,10 @@
             <link href="../assets/ico/apple-touch-icon-72-precomposed.png" sizes="72x72" rel="apple-touch-icon-precomposed"></link>
             <link href="../assets/ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed"></link>
             <link href="../assets/ico/favicon.png" rel="shortcut icon"></link>
+
+	     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+   	     <script src="attributeList.js" type="text/javascript"></script>	
+
         </head>
         <body>
             <!--

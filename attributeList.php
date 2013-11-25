@@ -7,14 +7,14 @@
 
 	$classID = $_GET["projectID"];
 
-	$result = mysql_query("SELECT * 
-				FROM $classID;");
+	$result = mysql_query("SELECT * FROM $classID WHERE studentIndex=-1;");
 	
 	$i = 1;
 
 	while($row = mysql_fetch_array($result)){
 ?>
-	<input type='checkbox' name='attribute[]' value='<?php echo $row['weight'] ?>'><?php echo $row['attribute'] ?><br>
+	<input type='checkbox' name='attribute[]' id='selectall<?php echo $i ?>' value='<?php echo $row['weight'] ?>'><?php echo $row['attribute'] ?>
+	<input type='checkbox' name='attributeName[]' class='selectedId<?php echo $i ?>' value='<?php echo $row['attribute'] ?>' style="display: none"><br>
 
 <?php
 	$i++;

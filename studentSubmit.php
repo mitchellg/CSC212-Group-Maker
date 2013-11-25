@@ -72,12 +72,22 @@
 	$sID = $_POST["studentName"];
 	$aArray = $_POST['attribute'];
 	$sEmail = $_POST['studentEmail'];
-	
+	$nameArray = $_POST['attributeName'];
+	$arrayLength = sizeof($nameArray);
+	$i=0;
 	$aWeight = array_sum($aArray);
 	
 	$data = "UPDATE students SET totalWeight='$aWeight', email='$sEmail' WHERE class='$classID' AND students.index='$sID';";
 
 	$result = mysql_query($data, $con);
+	
+	while($arrayLength > $i){
+	$data2 = "INSERT INTO $classID (attribute,weight,studentIndex,studentWeight) VALUES ('$nameArray[$i]', '$aArray[$i]', '$sID', 1);"; 
+
+	$result2 = mysql_query($data2, $con);
+
+	$i++;
+	}
 
 ?>
 	<p class="lead">Your information has been recorded! Please wait while others are entering their information </p>

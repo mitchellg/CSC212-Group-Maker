@@ -9,7 +9,7 @@
 
 	$result = mysql_query("SELECT * 
 				FROM students 
-				WHERE class = '$classID';");
+				WHERE class = '$classID' AND totalWeight is null;");
 
 	$i = 1;
 
