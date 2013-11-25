@@ -7,15 +7,38 @@
           <meta name="viewport" content="width=device-width initial-scale=1.0"/>
           <!--bootstrap -->
           <link rel="stylesheet" href="dist/css/bootstrap.min.css"/>
+          <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville|Wendy+One' rel='stylesheet' type='text/css'>
           <link rel="stylesheet" href="dist/css/custom.css"/>
-
+          <!-- Bootstrap core CSS -->
+          <link href="dist/css/bootstrap.css" rel="stylesheet">
 
       </head>
 
       <body>
       <div class="container">
+      <!-- Fixed navbar -->
+      <div class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">Group Maker</a>
+              </div>
+              <div class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                      <li><a href="index.html">Home</a></li>
+                      <li class="active"><a href="#about">Authoring Tool</a></li>
+                      <li><a href="#contact">Contact</a></li>
+                      <li><a href="#group">Group List</a></li>
+                  </ul>
+              </div><!--/.nav-collapse -->
+          </div>
+      </div>
           <!-- row 1 for navigation -->
-          <div class="row">
+          <!--<div class="row">
               <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
                   <div class="navbar-header">
                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
@@ -23,7 +46,7 @@
                           <span class="glyphicon glyphicon-circle-arrow-down"></span>
                           MENU
                           <!-- <span class="glyphicon-envelope"></span>
-                           <span class="glyphicon-envelope"></span> -->
+                           <span class="glyphicon-envelope"></span>
 
                       </button>
                   </div>
@@ -41,7 +64,7 @@
                       </ul>
                   </div>
               </nav>
-          </div> <!-- end of row 1 -->
+          </div>  end of row 1 -->
           <!-- row 2 jumbotron header -->
           <div class="jumbotron">
               <img src="lolcats.jpg" alt="" width="240" height="240" class="img-responsive pull-right img-rounded"/>
@@ -64,7 +87,7 @@
 
                 <!-- nested row 3 -->
 
-                <!-- list navigation for tabs -->
+                <!-- list navigation for tabs
 
                 <ul class="nav nav-tabs">
                     <li><a href="#justin" data-toggle="tab">Justin</a></li>
@@ -79,7 +102,7 @@
 
 
                 <!-- text for each callout -->
-                <!-- Justin-->
+                <!-- Justin
                 <div class="tab-content">
                     <div class="tab-pane active in fade" id="justin">
                         <p>Major: Computer Science</p>
@@ -89,7 +112,7 @@
                         <p><a href="#" class="btn btn-info">Read more >></a></p>
                     </div>
 
-                    <!-- Luke -->
+                    <!-- Luke
                     <div class="tab-pane fade" id="luke">
                         <p>Major: Computer Science</p>
                             <p>Year: Junior</p>
@@ -97,7 +120,7 @@
                         <p><a href="#" class="btn btn-info">Read more >></a></p>
                     </div>
 
-                    <!-- Mitchell -->
+                    <!-- Mitchell
                     <div class="tab-pane fade" id="mitch">
                         <p>Major: Computer Science</p>
                             <p>Year: Sophomore</p>
@@ -106,7 +129,7 @@
                         <p><a href="#" class="btn btn-info">Read more >></a></p>
                     </div>
 
-                    <!-- Sagi -->
+                    <!-- Sagi
                     <div class="tab-pane fade" id="sagi">
                         <p>Major: Computer Science.</p>
                             <p>Year: Junior.</p>
@@ -116,7 +139,7 @@
                     </div>
 
 
-                    <!-- Denis -->
+                    <!-- Denis
                     <div class="tab-pane fade" id="denis">
                         <p>Major: TEAM </p>
                         <p>Year: Graduate</p>
@@ -126,7 +149,7 @@
                         <p><a href="#" class="btn btn-info">Read more >></a></p>
                     </div>
 
-                    <!-- Alex F -->
+                    <!-- Alex F
                     <div class="tab-pane fade" id="alexf">
                         <p>Major: Economics</p>
                         <p>Year: Senior</p>
@@ -135,7 +158,7 @@
                         <p><a href="#" class="btn btn-info">Read more >></a></p>
                     </div>
 
-                    <!-- Alex S -->
+                    <!-- Alex S
                     <div class="tab-pane fade" id="alexs">
                         <p>Major: Financial Economics, Comp. Sci minor</p>
                             <p>Year: Senior</p>
@@ -202,17 +225,18 @@
                 </div><!-- end nested row 3 -->
             </article>
                 <aside class="col-lg-3 col-sm-4 col-lg-pull-9 col-sm-pull-8">
-                    <h3>Meet the team (from left to right):</h3>
-                    <ul class="nav nav-pills nav-stacked">
-                        <li><a href="#"> Mitchell Gordon</a></li>
-                        <li><a href="#"> Sagi Sulimani</a></li>
-                        <li class="active"><a href="#"> Denis Lubwa</a></li>
-                        <li><a href="#"> Alex Feiszli</a></li>
-                        <li><a href="#"> Ehsan Hoque (instructor)</a></li>
-                        <li><a href="#"> Alex Scherzer </a></li>
-                        <li><a href="#"> Luke Kortepeter</a></li>
-                        <li><a href="#"> Justin Kieber-King (not pictured)</a></li>
-                    </ul>
+                   <div id="speakerbox">
+                       <h2>Meet the Team</h2>
+                       <ul class="pager">
+                           <li class="previous"><a href="#" id="prev_btn">Previous</a></li>
+                           <li class="next"><a href="#" id="next_btn">Next</a></li>
+                       </ul>
+                       <!--
+                       <a href="#" id="prev_btn">&laquo;</a>
+                       <a href="#" id="next_btn">&raquo;</a> -->
+                       <div id="carousel"></div>
+                   </div>
+
                 </aside>
 
           </div>
@@ -230,13 +254,51 @@
             </footer>
           </div>
         <!-- javascript -->
-        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
+        <script id="speakerstpl" type="text/template">
+            {{#Demolition_Team}}
+                    <div class="avatar">
+                        <img src="img/{{shortname}}.jpg" alt="Photo of {{name}}" title="{{name}}"/>
+                        <h3>{{name}}</h3>
+                        <h4>{{Major}}</h4>
+                        <h5>{{Year}}</h5>
+                        <p>{{bio}}</p>
+                    </div>
+            {{/Demolition_Team}}
+
+
+        </script>
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.03/jquery.cycle.all.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/oj.mustache/0.7.2/oj.mustache.min.js"></script>
         <script src="dist/js/bootstrap.min.js"></script>
 
         <script>
 
-            $('.nav-tabs').find('a:first').tab('show');
+            //$('.nav-tabs').find('a:first').tab('show');
+
+            $(function(){
+                $.getJSON('data.json', function(data){
+
+                    var $carousel = $('#carousel');
+                    var template = $('#speakerstpl').html(),
+                        html = Mustache.to_html(template, data);
+                    $carousel.html(html);
+
+                    $carousel.cycle({
+                        fx: 'fade',
+                        pause: 1,
+                        next: '#next_btn',
+                        prev: '#prev_btn',
+                        speed: 500,
+                        timeout: 10000
+
+                    });
+
+
+                });
+
+            });
 
         </script>
 
