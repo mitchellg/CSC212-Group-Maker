@@ -44,6 +44,8 @@
 	     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
    	     <script src="attributeList.js" type="text/javascript"></script>	
 
+	     <link rel="icon" type="image/png" href="img/GMfavicon.png">
+
         </head>
         <body>
             <!--
