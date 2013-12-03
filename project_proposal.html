@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+   <html lang="eng">
+    <head>
+        <meta charset="utf-8" />
+        <title>Group Maker</title>
+        <meta name="viewport" content="width=device-width initial-scale=1.0"/>
+        <!--bootstrap -->
+        <link rel="stylesheet" href="dist/css/bootstrap.min.css"/>
+        <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville|Wendy+One' rel='stylesheet' type='text/css'>
+        <!-- Bootstrap core CSS-->
+        <link href="dist/css/bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet" href="dist/css/custom.css"/>
+        <link rel="icon" type="image/png" href="img/GMfavicon.png">
+
+
+    </head>
+
+    <body>
+    <div class="container">
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="img/GMHomebutton.png"></a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="author.php">Authoring Tool</a></li>
+                        <li class="active"><a href="project_proposal.html">Project Proposal</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+
+
+         <div class="row">
+
+             <article class="">
+                 <h1>Proposal</h1>
+                <h3>Definition:</h3> <p>Forming groups for class projects can be a difficult, stressful process. Students often choose the convenience of working with their friends over efficiency. Conversely, students may not have friends to work with and struggle to find a group at all. As a result, groups can become unbalanced where skill sets are not evenly distributed. Furthermore, choosing groups in person is often a hectic process.
+                 </p>
+                 <p>Ideally, groups will be evenly distributed among skillsets that are required for the project. We think a website that quickly automates this process by allowing students to enter information about their background and skills, and then algorithmically create groups could solve this problem.
+                 </p>
+                 <p>Random group generators do already exist. However, our product differentiates itself by algorithmically pairing people to create optimal groups.</p>
+               <h3>Requirements:</h3> <p> We will design a survey for students to determine the issues they typically face in forming groups and what problems tend to arise in group dynamics. We will also perform interviews with professors that will assess their needs and what they would like to see from an administrative perspective. Finally, we will interview teaching assistants who have experience putting groups together and see what they have learned from their experiences.
+
+                    Given our needfinding results, we will build a website to automatically create optimal groups. Our website will be hosted using the AWS free plan and will make use of open source technologies.
+                </p>
+                 <h3>System: </h3>
+                 <p>To solve the problem of creating project groups, we propose to create a website for forming groups. The process begins with an authoring tool used by instructors. The instructor enters in a list of students in plain text (can be copy/pasted from blackboard), selects the desired size of groups, and selects the attributes that students will need for the project. There will be a pre-existing list of attributes, but instructors may also specify custom attributes. A custom project URL is then created, which the instructor sends out to all students. A custom instructor URL is also generated, which the instructor can use to manually modify groups.
+
+                     Students will go to this project URL, select their name from the class list, and fill out their attributes. Students will not need to authenticate. This would require the use of user accounts. The purpose of this system is to save time; groups could be made in less than a minute. Users setting up accounts detracts from the speed of the system. In terms of other forms, such as user ID or netID, students often cannot remember these, which makes the process tedious. Furthermore, netIDs are unique to UofR, but this tool should be accessible to other schools.</p>
+
+                     <p>Instructors will predetermine which information students should submit. As such, users would fill out a new listing for each class, as the information desired by each professor is unique. There will be a deadline by which students should submit their info. Students who did not submit their information on time will still be assigned a group. When the instructor is ready to create the groups, they go to their instructor URL and click a button.</p>
+
+                     <p>The system will then automatically place students into groups that have a balanced  set of skills. Right after that, the system will display the groups at the project URL. Each group list has: the names of the members, their skills, and their graduation year.</p>
+
+                     <p>This system will be hosted on Amazon web services and can be programmed using HTML5, CSS, PHP, JavaScript/jQuery, and a MySQL database. We will use the Bootstrap framework to help with the front-end.</p>
+
+                     <p>Similar programs only randomly put people into groups. This is not helpful since groups may not be balanced. By having students fill out a basic profile, this new system will create balanced groups.</p>
+
+                 <h3>Proposal Skit:</h3>
+                 <p>Watch our project proposal skit below </p>
+                 <div style="margin: 0 auto; overflow: hidden">
+                     <iframe width="560" height="315" src="//www.youtube.com/embed/moOrsccdvAM" frameborder="0" allowfullscreen></iframe>
+                 </div>
+
+
+
+
+             </article>
+
+         </div>
+
+
+
+
+          
+
+
+
+
+
+
+        <footer class="row">
+            <p>
+                Project Mentor: Ryan Puffer
+            </p>
+            <p> Professor: M. Ehsan Hoque</p>
+        </footer>
+    </div>
+    </body>
+   </html>

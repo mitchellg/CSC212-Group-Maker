@@ -170,7 +170,12 @@
 
     </div> <!-- /container -->
 
-
+ <footer class="row">
+                <p>
+                    Project Mentor: Ryan Puffer
+                </p>
+                <p> Professor: M. Ehsan Hoque</p>
+            </footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

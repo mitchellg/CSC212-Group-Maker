@@ -1,7 +1,6 @@
 body {
     padding: 70px;
-    font-family: 'Libre Baskerville';
-
+    
 }
 
 .pull-right.img-responsive{
@@ -38,6 +37,7 @@ footer {
     border-top: 1px solid #ddd;
     color: #999;
     text-align: center;
+    background-color:lightgray;
 }
 
 
@@ -99,14 +99,22 @@ footer {
 #speakerbox #prev_btn, #speakerbox #next_btn {
 
     background-color: #d33682;
-    padding: 5px 10px;
+    /*padding: 5px 10px; */
+    padding-top: 10px;
+
     border-radius: 10px;
     margin: 10px 0;
-    display: inline-block;
+    /*display: inline-block; */
 }
 
 #speakerbox a#prev_btn, #speakerbox a#next_btn {
 
     text-decoration: none;
     color: #FFF;
+}
+
+div#youtube {
+
+    margin: 0 auto;
+    align-content: center;
 }
