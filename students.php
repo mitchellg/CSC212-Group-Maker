@@ -107,7 +107,7 @@
 			
 			<p class="lead">
 				
-				<input id="submit" type="submit" value="Submit">
+				<input id="submit" class="btn btn-default" type="submit" value="Submit">
 
 			</p>
 
@@ -116,15 +116,7 @@
                 </div>
                 <div id="push"></div>
             </div>
-            <div id="footer">
-                <div class="container">
-                    <p class="muted credit">
-
-                  Group Maker 2013. csc212-groupmaker@googlegroups.com
-
-                    </p>
-                </div>
-            </div>
+            
             <!--
 
              Le javascript

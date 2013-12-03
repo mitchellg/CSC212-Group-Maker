@@ -17,7 +17,7 @@
     <title>Author Edit</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="dist/css/bootstrap.css" rel="stylesheet">
+    <link href="dist/css/Uniformity/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="navbar-fixed-top.css" rel="stylesheet">
@@ -45,13 +45,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Group Maker</a>
+          <a class="navbar-brand" href="#"><img src="img/GMHomebutton.png"></a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="index.html">Home</a></li>
+  	     <li><a href="index.html">Home</a></li>
             <li class="active"><a href="#about">Authoring Tool</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="project_proposal.html">Project Proposal</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

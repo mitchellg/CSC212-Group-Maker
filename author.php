@@ -11,10 +11,11 @@
     <title>Author</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="dist/css/bootstrap.css" rel="stylesheet">
+    <link href="dist/css/Uniformity/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="navbar-fixed-top.css" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/custom.css"/>
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -45,8 +46,8 @@
           <ul class="nav navbar-nav">
             <li><a href="index.html">Home</a></li>
             <li class="active"><a href="#about">Authoring Tool</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#group">Group List</a></li>
+            <li><a href="project_proposal.html">Project Proposal</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
 	  </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -56,8 +57,8 @@
 
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-        <h1>Instructor Authoring Tool</h1>
-        <p>Fill out the form below to begin making groups for your class.</p>
+        <h1>Authoring Tool</h1>
+        <p>Fill out the form below to begin making groups</p>
       </div>
 
 
@@ -168,6 +169,7 @@
       </form>
 
     </div> <!-- /container -->
+
 
 
     <!-- Bootstrap core JavaScript
