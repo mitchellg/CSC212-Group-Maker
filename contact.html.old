@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+
+   <html lang="eng">
+    <head>
+        <meta charset="utf-8" />
+        <title>Group Maker</title>
+        <meta name="viewport" content="width=device-width initial-scale=1.0"/>
+        <!--bootstrap -->
+        <link rel="stylesheet" href="dist/css/bootstrap.min.css"/>
+        <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville|Wendy+One' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="dist/css/custom.css"/>
+        <!-- Bootstrap core CSS -->
+        <link href="dist/css/bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet" href="dist/css/normalize.css" />
+        <link rel="stylesheet" href="dist/css/mystyle.css" />
+        <link rel="icon" type="image/png" href="img/GMfavicon.png">
+
+
+    </head>
+
+    <body>
+    <div class="container">
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="img/GMHomebutton.png"></a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="author.php">Authoring Tool</a></li>
+                        <li><a href="project_proposal.html">Proposal</a></li>
+                        <li><a href="prototypes.html">Requirements</a></li>
+                        <li class="active"><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+        <div class='row'>
+            <form method="post" id="myform" action="MAILTO:dlubwa@gmail.com" enctype="text/plain">
+              <fieldset id="login">
+                <legend>Send Us Feedback</legend>
+                  <p id="thanks"></p>
+
+            <form method="post" id="myform" action="#">
+              <fieldset id="login">
+                <legend>Send Us Feedback</legend>
+                  <ol>
+                      <li>
+                          <label for="myname">Name *</label>
+                          <input type="text" name="myname" id="myname" title="Please enter your name" autofocus  required />
+                      </li>
+                      <li>
+                          <label for="myemail">Email *</label>
+                          <input type="email" name="myemail" id="myemail" required />
+                      </li>
+                      <li>
+                          <label for="comment">Comments</label>
+                          <textarea name="comment" id="comment"></textarea>
+                      </li>
+                  </ol>
+                  <button type="submit" id="submit">send</button>
+                  <button type="submit">send</button>
+              </fieldset>
+            </form>
+
+        </div>
+        <footer class="row">
+                    <p>
+                        Project Mentor: Ryan Puffer
+                    </p>
+                    <p> Professor: M. Ehsan Hoque</p>
+                </footer>
+
+    </div>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(function(){
+            $('#submit').on('click',function(){
+
+                $('p.thanks').html('<h3>Thanks for your feedback!</h3>');
+                $('#myname').val = '';
+                $('#myemail').val = '';
+                $('#comment').val = '';
+
+            });
+        });//on ready
+    </script>
+     </body>
+       </html>

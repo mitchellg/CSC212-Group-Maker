@@ -1,77 +1,99 @@
 <!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Contact</title>
+		<meta name="description" content="" />
+		<meta name="author" content="Tudor Anghelina" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+		<link href="sticky-footer-navbar.css" rel="stylesheet">
+	</head>
 
-   <html lang="eng">
-    <head>
-        <meta charset="utf-8" />
-        <title>Group Maker</title>
-        <meta name="viewport" content="width=device-width initial-scale=1.0"/>
-        <!--bootstrap -->
-        <link rel="stylesheet" href="dist/css/bootstrap.min.css"/>
-        <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville|Wendy+One' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="dist/css/custom.css"/>
-        <!-- Bootstrap core CSS -->
-        <link href="dist/css/bootstrap.css" rel="stylesheet">
-        <link rel="stylesheet" href="dist/css/normalize.css" />
-        <link rel="stylesheet" href="dist/css/mystyle.css" />
-        <link rel="icon" type="image/png" href="img/GMfavicon.png">
 
+	<body style="background:url('bg.png') repeat">
+		    <div class="navbar navbar-default navbar-fixed-top">
+		      <div class="container">
+		        <div class="navbar-header">
+		          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		          </button>
+		          <a class="navbar-brand" href="#"><img src="img/GMHomebutton.png"></a>
+		        </div>
+		        <div class="navbar-collapse collapse">
+		          <ul class="nav navbar-nav">
+		            <li><a href="index.html">Home</a></li>
+		            <li><a href="author.php">Authoring Tool</a></li>
+		            <li><a href="project_proposal.html">Proposal</a></li>
+		            <li><a href="prototypes.html">Requirements</a></li>
+		            <li class="active"><a href="contact.html">Contact Us</a></li>
+			  </ul>
+		        </div><!--/.nav-collapse -->
+		      </div>
+		    </div>
+		<div style="margin-top:200px">
+			<div class="container">
+				<div class="panel panel-default" style="margin:0 auto;width:500px">
+					<div class="panel-heading">
+						<h2 class="panel-title">Contact Form</h2>
+					</div>
+					<div class="panel-body">
+						<form name="contactform" method="post" action="mailer.php" class="form-horizontal" role="form">
+							<div class="form-group">
+								<label for="inputName" class="col-lg-2 control-label">Name</label>
+								<div class="col-lg-10">
+									<input type="text" class="form-control" id="inputName" name="inputName" placeholder="Your Name">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputEmail1" class="col-lg-2 control-label">Email</label>
+								<div class="col-lg-10">
+									<input type="text" class="form-control" id="inputEmail" name="inputEmail" placeholder="Your Email">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputSubject" class="col-lg-2 control-label">Subject</label>
+								<div class="col-lg-10">
+									<input type="text" class="form-control" id="inputSubject" name="inputSubject" placeholder="Subject Message">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword1" class="col-lg-2 control-label">Message</label>
+								<div class="col-lg-10">
+									<textarea class="form-control" rows="4" id="inputMessage" name="inputMessage" placeholder="Your message..."></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-lg-offset-2 col-lg-10">
+									<button type="submit" class="btn btn-default">
+										Send Message
+									</button>
+								</div>
+							</div>
+						</form>
 
-    </head>
-
-    <body>
-    <div class="container">
-        <!-- Fixed navbar -->
-        <div class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#"><img src="img/GMHomebutton.png"></a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="author.php">Authoring Tool</a></li>
-                        <li><a href="project_proposal.html">Proposal</a></li>
-                        <li><a href="prototypes.html">Requirements</a></li>
-                        <li class="active"><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div><!--/.nav-collapse -->
-            </div>
-        </div>
-        <div class='row'>
-            <form method="post" id="myform" action="#">
-              <fieldset id="login">
-                <legend>Send Us Feedback</legend>
-                  <ol>
-                      <li>
-                          <label for="myname">Name *</label>
-                          <input type="text" name="myname" id="myname" title="Please enter your name" autofocus  required />
-                      </li>
-                      <li>
-                          <label for="myemail">Email *</label>
-                          <input type="email" name="myemail" id="myemail" required />
-                      </li>
-                      <li>
-                          <label for="comment">Comments</label>
-                          <textarea name="comment" id="comment"></textarea>
-                      </li>
-                  </ol>
-                  <button type="submit">send</button>
-              </fieldset>
-            </form>
-
-        </div>
-        <footer class="row">
-                    <p>
-                        Project Mentor: Ryan Puffer
-                    </p>
-                    <p> Professor: M. Ehsan Hoque</p>
-                </footer>
-
-    </div>
-     </body>
-       </html>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- <div id="footer">
+		      <div class="container">
+		       <p class="text-muted">
+		            Project Mentor: Ryan Puffer
+		        </p>
+		        <p> Professor: M. Ehsan Hoque</p>
+		      </div>
+		    </div> -->
+	</body>
+</html>

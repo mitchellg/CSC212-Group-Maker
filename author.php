@@ -12,10 +12,10 @@
 
     <!-- Bootstrap core CSS -->
     <link href="dist/css/Uniformity/bootstrap.css" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link href="navbar-fixed-top.css" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/custom.css"/>
+    <link href="sticky-footer-navbar.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -46,6 +46,8 @@
           <ul class="nav navbar-nav">
             <li><a href="index.html">Home</a></li>
             <li class="active"><a href="#about">Authoring Tool</a></li>
+            <li><a href="project_proposal.html">Proposal</a></li>
+            <li><a href="prototypes.html">Requirements</a></li>
             <li><a href="project_proposal.html">Project Proposal</a></li>
             <li><a href="contact.html">Contact Us</a></li>
 	  </ul>
@@ -170,12 +172,17 @@
 
     </div> <!-- /container -->
 
- <footer class="row">
-                <p>
-                    Project Mentor: Ryan Puffer
-                </p>
-                <p> Professor: M. Ehsan Hoque</p>
-            </footer>
+<!--     <div id="footer">
+          <div class="container">
+            <p class="text-muted">Place sticky footer content here.</p>
+            <p>
+                Project Mentor: Ryan Puffer
+            </p>
+            <p> Professor: M. Ehsan Hoque</p>
+          </div>
+        </div> -->
+
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

@@ -1,3 +1,19 @@
+ <?php 
+	 $classID = $_GET["projectID"];
+	$db = new PDO('mysql:host=localhost;dbname=group_maker', 'root', 'password',array(PDO::ATTR_EMULATE_PREPARES => false,
+                                   PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)); //From: http://wiki.hashphp.org/PDO_Tutorial_for_MySQL_Developers 
+ 	$classesMadeQuery = $db->prepare("select groupsMade from classes where classId='$classID'");
+        $classesMadeQuery->execute();
+        $classesMade = $classesMadeQuery->fetchAll();
+        $isMade = $classesMade[0][0];
+	if($isMade == 1){
+	header( 'Location: http://ec2-54-205-135-226.compute-1.amazonaws.com/GroupMaker/studentSubmit.php?projectID='.$classID ) ;
+
+
+	}
+  ?>
+
+
     <!DOCTYPE html>
     <html lang="en">
         <head>
@@ -72,7 +88,7 @@
 			$classID = $_GET["projectID"];
 			?>
 
-			<form name="input" action="studentSubmit.php"  method="post"> 
+			<form name="input" action="studentSubmit.php?projectID=<?php echo $classID ?>"  method="post"> 
 			<p class="lead">
 
                         Select your name from the list:

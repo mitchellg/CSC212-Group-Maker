@@ -45,7 +45,67 @@
         <body>
             <!--
 
-             Part 1: Wrap all page content here 
+<?php
+        $con = mysql_connect("localhost","root","password");
+        mysql_select_db("group_maker", $con);
+
+        $classID = $_GET["projectID"];
+        $sID = $_POST["studentName"];
+        $aArray = $_POST['attribute'];
+        $sEmail = $_POST['studentEmail'];
+        $nameArray = $_POST['attributeName'];
+        $arrayLength = sizeof($nameArray);
+        $i=0;
+        $aWeight = array_sum($aArray);
+
+        $data = "UPDATE students SET totalWeight='$aWeight', email='$sEmail' WHERE class='$classID' AND students.index='$sID';";
+	 
+	$db = new PDO('mysql:host=localhost;dbname=group_maker', 'root', 'password',array(PDO::ATTR_EMULATE_PREPARES => false,
+                                   PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)); //From: http://wiki.hashphp.org/PDO_Tutorial_for_MySQL_Developers 
+         try{
+
+                $stmt = $db->query("SELECT className,sizeGroups 
+                                        FROM classes 
+                                        WHERE classId='$classID'");
+                $name = $stmt->fetch(PDO::FETCH_ASSOC);
+
+                $studentsQuery = $db->prepare("SELECT name,groupNumber,email
+                                                FROM students 
+                                                WHERE class='$classID' 
+                                                ORDER BY groupNumber ASC");
+                $studentsQuery->execute();
+                $studentsByGroup = $studentsQuery->fetchAll();
+                $className = $name["className"];
+                $currentGroup = 1; //For loop that puts students into panels                
+                $currentStudent = 0;
+
+
+
+                } catch(PDOException $ex){
+                        echo "error occured in query ";
+                 }
+
+	
+
+
+
+	$classesMadeQuery = $db->prepare("select groupsMade from classes where classId='$classID'");
+        $classesMadeQuery->execute();
+        $classesMade = $classesMadeQuery->fetchAll();
+	$isMade = $classesMade[0][0]; 
+	if($isMade == 0){
+		$result = mysql_query($data, $con);
+
+        	while($arrayLength > $i){
+        		$data2 = "INSERT INTO $classID (attribute,weight,studentIndex,studentWeight) VALUES ('$nameArray[$i]', '$aArray[$i]', '$sID', 1);";
+
+        		$result2 = mysql_query($data2, $con);
+
+        		$i++;
+        	}
+	}
+
+?>
 
             -->
             <div id="wrap">
@@ -56,13 +116,48 @@
                 -->
                 <div class="container">
                     <div class="page-header">
-                        <h1>
+                        
+			<h1>
 
-                            Success!
+
+                        <?php if($isMade == 0){ echo "Success!";} else{ echo strtoupper($className);} ?>
 
                         </h1>
                     </div>
 
+<<<<<<< HEAD
+	<?php if($isMade == 0){ ?>
+	<p class="lead">Your information has been recorded! Please wait while others are entering their information. Refresh the page when your instructor has created your groups. </p>
+	<?php } else{ ?>
+
+	<div class="row">
+                 <?php while($currentStudent < count($studentsByGroup)) { ?> 
+                        <div class="row">
+                        <div class="panel panel-primary">
+                                <div class="panel-heading"><strong><?php echo "Group: ".$studentsByGroup[$currentStudent]['groupNumber'] ?></strong></div>
+                                                <table class="table">
+                                                        <tr>
+                                                                <th>#</th>
+                                                                <th>name</th>
+                                                                <th>email</th>
+                                                        </tr>
+                                                        <?php $j=1; while($currentGroup == $studentsByGroup[$currentStudent]['groupNumber']){ ?>
+                                                        <tr>
+                                                                <td><?php echo $j++ ?></td>
+                                                                <td><?php echo $studentsByGroup[$currentStudent]['name'] ?></td>
+                                                                <td><?php echo $studentsByGroup[$currentStudent++]['email'] ?></td>
+
+                                                        </tr>
+                                                        <?php }; $currentGroup++;?>
+                                                </table>
+
+                        </div>
+                        </div>
+                <?php } ?>
+
+              </div>  <!-- /container -->
+	<?php } ?>
+=======
 
 <?php 
 	$con = mysql_connect("localhost","root","password"); 
@@ -93,6 +188,7 @@
 	<p class="lead">Your information has been recorded! Please wait while others are entering their information </p>
 	<div class="loader">
   <p id="load"></p>
+>>>>>>> 23f5a5821e3a5df6edc7fb0e2f7a9e02cf781b85
 </div>
 
 </div>

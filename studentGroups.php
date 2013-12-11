@@ -33,29 +33,27 @@
                                    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)); //From: http://wiki.hashphp.org/PDO_Tutorial_for_MySQL_Developers 
         	 $classID = $_GET["projectID"];
 		try{
+		
 		$stmt = $db->query("SELECT className,sizeGroups 
-					FROM classes 
-					WHERE classId='$classID'");
-		$name = $stmt->fetch(PDO::FETCH_ASSOC);
-		$studentsQuery = $db->prepare("SELECT name,groupNumber
-						FROM students 
-						WHERE class='$classID' 
-						ORDER BY groupNumber ASC");
-		$studentsQuery->execute();
-		$studentsByGroup = $studentsQuery->fetchAll();
-		$className = $name["className"];
-		$currentGroup = 1; //For loop that puts students into panels		
-		$currentStudent = 0;
-		 } catch(PDOException $ex){
+                                        FROM classes 
+                                        WHERE classId='$classID'");
+                $name = $stmt->fetch(PDO::FETCH_ASSOC);
+                
+		$studentsQuery = $db->prepare("SELECT name,groupNumber,email
+                                                FROM students 
+                                                WHERE class='$classID' 
+                                                ORDER BY groupNumber ASC");
+                $studentsQuery->execute();
+                $studentsByGroup = $studentsQuery->fetchAll();
+                $className = $name["className"];
+                $currentGroup = 1; //For loop that puts students into panels                
+                $currentStudent = 0;
+		
+		
+
+		} catch(PDOException $ex){
 			echo "error occured in query ";
 		 }
-		
-		
-
-
-
-
-
 
 	?>
 	    <!-- Fixed navbar -->
@@ -86,7 +84,7 @@
 				<h1><?php echo strtoupper($className); ?></h1>
 			</div>
 		<div class="row">
-		 <?php  while($currentStudent <= count($studentsByGroup)) { ?>
+		 <?php while($currentStudent < count($studentsByGroup)) { ?> 
 			<div class="row">
 			<div class="panel panel-primary">
 				<div class="panel-heading"><?php echo "Group: ".$studentsByGroup[$currentStudent]['groupNumber'] ?></div>
@@ -94,15 +92,16 @@
 							<tr>
 								<th>#</th>
 								<th>name</th>
-								<th>other possible info</th>
+								<th>email</th>
 							</tr>
 						       	<?php $j=1; while($currentGroup == $studentsByGroup[$currentStudent]['groupNumber']){ ?>
 							<tr>
 								<td><?php echo $j++ ?></td>
-								<td><?php echo $studentsByGroup[$currentStudent++]['name'] ?></td>
-								<td>Info Here</td>
+								<td><?php echo $studentsByGroup[$currentStudent]['name'] ?></td>
+								<td><?php echo $studentsByGroup[$currentStudent++]['email'] ?></td>
+								
 							</tr>
-							<?php } $currentStudent++;  $currentGroup++;?>
+							<?php }; $currentGroup++;?>
 						</table>
 				  
   			</div>

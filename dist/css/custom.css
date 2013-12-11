@@ -1,12 +1,14 @@
 body {
     padding: 70px;
-
+    
 }
 
 .pull-right.img-responsive{
-    margin: 0 0 1em 1em;
+   margin: 0 0 1em 1em;
 
 }
+
+
 
 
 .navbar-inverse .navbar-toggle {
@@ -32,11 +34,12 @@ body {
 
 
 footer {
-    padding: 2em 0; /* first for topandbottom next for left and right*/
+    padding: 2em 0; /* first for topandbottom next for left and right */
     margin: 3em 0;
     border-top: 1px solid #ddd;
     color: #999;
     text-align: center;
+    background-color:lightgray;
 }
 
 
@@ -46,4 +49,198 @@ footer {
     border-right: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     padding: 0.8em;
+}
+
+#speakerbox {
+    width: 350px;
+    height: 500px;
+    background-color: lightgray;
+    padding: 1px 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+
+
+}
+
+#speakerbox h3, #speakerbox h4, #speakerbox h5 {
+
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+
+}
+
+#speakerbox h3 {
+    font-size: 2em;
+    line-height: .9em;
+    font-family: 'wendy one';
+    color: #115F79;
+}
+
+#speakerbox h4, #speakerbox h5 {
+
+    color: #973C26;
+    font-weight: bold;
+    margin-bottom: 5px;
+    line-height: 1.2em;
+
+}
+
+#speakerbox img {
+    float: right;
+    margin-left: 10px;
+    border-radius: 10px;
+    width: 100px;
+}
+
+#speakerbox p {
+
+    color: #1E3A40;
+    font-size: 1.5em;
+}
+
+#speakerbox #prev_btn, #speakerbox #next_btn {
+
+    background-color: #d33682;
+    /*padding: 5px 10px; */
+    padding-top: 0;
+
+    border-radius: 10px;
+    margin: 10px 0;
+    margin-top: 0;
+    /*display: inline-block; */
+}
+
+#speakerbox a#prev_btn, #speakerbox a#next_btn {
+
+    text-decoration: none;
+    color: #FFF;
+}
+
+div#youtube {
+
+    margin: 0 auto;
+    align-content: center;
+}
+
+/*
+    Colorbox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none; -ms-interpolation-mode:bicubic;}
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+
+/*
+    User Style:
+    Change the following styles to modify the appearance of Colorbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:#d3d3d3;}
+#colorbox{outline:0;}
+#cboxContent{margin-top:20px;background:#d3d3d3;}
+.cboxIframe{background:#fff;}
+#cboxError{padding:50px; border:1px solid #ccc;}
+#cboxLoadedContent{border: 1px solid #d3d3d3; border-width: 20px 100px 75px; background:none; overflow:hidden !important}
+#cboxTitle{position:absolute; bottom: 41px; left:0; color:#fff; font-size: 18px; font-size: 1.125rem; right: 0; text-align: center;}
+#cboxCurrent{position:absolute; bottom: 16px; left: 0; text-align: center; right:0px; color:darkgrey; font-size: 16px; font-size: 2em;}
+
+
+/* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {border:0; padding:0; margin:0; overflow:visible; width:auto; background:none; }
+
+/* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+#cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {outline:0;}
+
+#cboxSlideshow{position:absolute; top:-20px; right:90px; color:#fff;}
+
+#cboxPrevious, #cboxNext, #cboxPreviousDisabled, #cboxNextDisabled {
+    background: darkgrey url(../../img/sprite.png) 0 -49px;
+    bottom: 0;
+    height: 63px;
+    left: 27px;
+    margin-top: -32px;
+    position: absolute;
+    text-indent: -999em;
+    top: 50%;
+    width: 45px;
+    z-index: 30;
+}
+
+#cboxPreviousDisabled {
+    background-position: 0 -488px;
+}
+
+#cboxNext, #cboxNextDisabled {
+    background-position: 0 -112px;
+    left: auto;
+    right: 27px;
+}
+
+#cboxNextDisabled {
+    background-position: 0 -552px;
+}
+
+#cboxClose{
+    border: 4px solid #7e7550;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    position:absolute; top:8px; right:8px; display:block; width:34px; height:34px; text-indent:-9999px; overflow: hidden;
+}
+#cboxClose:before, #cboxClose:after {
+    background: #7e7550;
+    content: '';
+    height: 32px;
+    left: 13px;
+    position: absolute;
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: -1px;
+    width: 4px;
+}
+
+#cboxClose:after {
+    left: 9px;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#cboxPreviousLink, #cboxNextLink {
+    bottom: 16px;
+    color: #59bde0;
+    font-size: 16px;
+    font-size: 1rem;
+    left: 328px;
+    position: absolute;
+    z-index: 2;
+}
+
+#cboxPreviousLink.disabled, #cboxNextLink.disabled {
+    color: #7d744f;
+    cursor: default;
+    text-decoration: none;
+}
+
+#cboxNextLink {
+    left: auto;
+    right: 360px;
+}
+
+#cboxPreviousLink:before {
+    content: '< ';
+}
+
+#cboxNextLink:after {
+    content: ' >';
 }

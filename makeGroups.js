@@ -71,7 +71,7 @@ $( document ).ready(function() {
   	        type: "POST",
   	        data: {authorID: gup("authorID")},
   	        success: function(d){
-  	            alert("Groups made!")
+  	            // alert("Groups made!")
   	        },
   	        error:function(){
   	            alert("failure");
