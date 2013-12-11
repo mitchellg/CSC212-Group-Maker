@@ -1,51 +1,52 @@
 {"Demolition_Team": [
     {
-        "name": "Mitchell Gordon",
+        "name": "Mitchell",
         "shortname": "Mitchell_Gordon",
         "Major": "Computer Science",
         "Year": "Sophomore",
-        "bio": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived"
+        "bio": "A CS major, Mitchell loves learning and hacking with new technologies. He is involved in HCI research and enjoys playing the cello in the URSO."
     },
     {
-        "name": "Alex Harvey Scherzer",
+        "name": "Alex H.",
         "shortname": "Alex_Scherzer",
-        "Major": "Financial Economics, Comp. Sci minor",
+        "Major": "Financial Econ",
         "Year": "Senior",
-        "bio": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived"
+        "bio": "Alex is a current senior, majoring in financial economics with minors in computer science and business. He plays trumpet in the UR jazz band, and is a photography and video enthusiast."
     },
     {
-        "name": "Luke Kortepeter",
+        "name": "Luke ",
         "shortname": "Luke_Kortepeter",
         "Major": "Computer Science",
         "Year": "Junior",
-        "bio": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived"
+        "bio": "Aside from CS, Luke's passion is History and he is involved with the Seward Project, a Digital Humanities Initiative at the UofR. When not going on adventures in the streets of DC, Luke plays Ultimate Disc and enjoys quiet evenings by a fire."
     },
     {
-        "name": "Sagi Sulimani",
+        "name": "Sagi",
         "shortname": "Sagi_Sulimani",
         "Major": "Computer Science",
         "Year": "Junior",
-        "bio": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived"
+        "bio": "Sagi is an exchange student from Israel. When not hacking away using C, he enjoys playing soccer and drums."
+
     },
     {
-        "name": "Alex Feiszli",
+        "name": "Alex F.",
         "shortname": "Alex_Feiszli",
         "Major": "Economics",
         "Year": "Senior",
-        "bio": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived"
+        "bio": "Alex is currently enrolled in the KEY program in order to further his Computer Science studies and develop a software application. Outside of school, Alex has experience in marketing, having had several internships in the field."
     },
     {
-        "name": "Justin Kieber-King",
+        "name": "Justin ",
         "shortname": "Justin_Kieber-King",
         "Major": "Computer Science",
         "Year": "Junior",
-        "bio": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived"
+        "bio": "Justin enjoys playing Quidditch, reading about new ideas in CS and psychology, and singing/listening to music"
     },
     {
-        "name": "Denis Lubwa",
+        "name": "Denis ",
         "shortname": "Denis_Lubwa",
-        "Major": "Technical Entrepreneurship and Management",
+        "Major": "TEAM",
         "Year": "Graduate",
-        "bio": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived"
+        "bio": "Denis hails from Bar-o-mal village in Gulu, Uganda. When not furiously trying to get up to speed with the latest Web 2.0 technologies, he enjoys watching or playing basketball and learning to dance salsa"
     }
 ]}
