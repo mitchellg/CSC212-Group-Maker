@@ -60,7 +60,7 @@ body	{
 }
   
 #myform legend {
-	/*display: none; */
+	margin-top: 0.8em;
 }
 
 
@@ -105,7 +105,7 @@ body	{
 }
 
 #myform ol li label, .grouphead {
-	font-weight: bold;
+	/*font-weight: bold; */
 	display: block;
 	margin-bottom: 5px;
 	color: #454D4D;
